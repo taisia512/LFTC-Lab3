@@ -1,0 +1,48 @@
+
+GRADELIST labGrades := [7, 8, 9, 6, 8]
+
+INT grade
+INT sum
+INT count
+INT average
+INT examGrade
+INT projectGrade
+INT finalGrade
+
+sum := 0
+count := 0
+
+INPUT examGrade
+INPUT projectGrade
+
+FOR grade IN labGrades DO
+    sum := sum + grade
+    count := count + 1
+END
+
+average := sum / count
+
+finalGrade := (examGrade * 50 + average * 30 + projectGrade * 20) / 100
+
+OUTPUT average
+OUTPUT examGrade
+OUTPUT projectGrade
+OUTPUT finalGrade
+
+IF examGrade < 5 THEN
+    OUTPUT "EXAM FAILED"
+ELSE
+    IF projectGrade < 5 THEN
+        OUTPUT "PROJECT FAILED"
+    ELSE
+        IF average < 5 THEN
+            OUTPUT "LAB FAILED"
+        ELSE
+            IF finalGrade < 5 THEN
+                OUTPUT "FINAL GRADE FAILED"
+            ELSE
+                OUTPUT "PASSED"
+            END
+        END
+    END
+END

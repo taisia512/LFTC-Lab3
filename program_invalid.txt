@@ -1,0 +1,26 @@
+
+INT grade
+INT _average
+INT 2count
+REAL average
+
+grade := 007
+grade := 12..3
+grade := 123abc
+grade := 9.5.2
+grade := 12.
+grade := 00.5
+grade := 5abc
+
+average := 9.75
+grade := 100
+
+OUTPUT "PASSED"
+OUTPUT "FAILED
+OUTPUT @
+OUTPUT #
+OUTPUT $
+OUTPUT &
+
+INPUT _grade
+OUTPUT 123grade
